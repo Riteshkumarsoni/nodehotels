@@ -14,7 +14,7 @@ const menuItemRoutes = require("./routes/menuItemRoutes")
 app.use("/person", personRoutes)
 app.use("/menuItem", menuItemRoutes)
 
-
+//  server listen on 3000 port
 app.listen(3000, () => {
     console.log("Server is running at http://localhost:3000")
 })
