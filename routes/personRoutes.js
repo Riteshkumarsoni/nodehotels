@@ -24,7 +24,7 @@ router.get('/', async (req,res) => {
     }
 })
 
-router.delete('//:personId', async (req,res) => {
+router.delete('/:personId', async (req,res) => {
     try{
         const {personId} = req.params
         const response = await Person.findByIdAndDelete(personId)
@@ -35,7 +35,7 @@ router.delete('//:personId', async (req,res) => {
     }
 })
 
-router.put("//:personId", async (req, res) => {
+router.put("/:personId", async (req, res) => {
     try{
         const {personId} = req.params
         const updatedData = req.body

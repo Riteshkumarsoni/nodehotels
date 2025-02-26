@@ -26,7 +26,7 @@ router.post("/", async (req,res) => {
     }
 })
 
-router.put("//:menuId", async (req,res) => {
+router.put("/:menuId", async (req,res) => {
     try{
         const {menuId} = req.params
         const updateMenuData = req.body
@@ -41,7 +41,7 @@ router.put("//:menuId", async (req,res) => {
     }
 })
 
-router.delete("//:menuId", async (req, res) => {
+router.delete("/:menuId", async (req, res) => {
     try{
         const {menuId} = req.params
         await MenuItem.findByIdAndDelete(menuId)
